@@ -29,22 +29,22 @@
   
     ```
     character_id		未知
-    chat_id				未知
+    chat_id		未知
     date_created		聚会被创建时间，格式为含时区的标准datetime格式，时区为utc
-    date_now			聚会报名时间，格式为含时区的标准datetime格式，时区为utc
+    date_now		聚会报名时间，格式为含时区的标准datetime格式，时区为utc
     date_started		聚会开始时间，格式为含时区的标准datetime格式，时区为utc
-    icon_url			聚会图标url
-    id					聚会ID，可用于查询聚会详情API
-    name				聚会名称
+    icon_url		聚会图标url
+    id		聚会ID，可用于查询聚会详情API
+    name		聚会名称
     result_status		聚会结果，值为fail或success，真正意义未知
     room_chat_id		聚会房间ID
-    status				聚会状态，值为talking_over/canceled/quit
+    status		聚会状态，值为talking_over/canceled/quit
     template_type		聚会模版/类型，值normal为普通聚会，值parlor为客厅
     topic_creator_id	聚会创建者ID，普通聚会为null，客厅为客厅主人user_id
-    topic_id			聚会主题ID
-    topic_type			未知
-    user_avatar			匿名人物的头像
-    user_id				你的user_id
+    topic_id		聚会主题ID
+    topic_type		未知
+    user_avatar		匿名人物的头像
+    user_id		你的user_id
     user_nickname		匿名人物的昵称
     user_random_status	未知，当前值恒为true
     ```

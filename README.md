@@ -74,7 +74,7 @@
             "user_id": "a1jfayl4zp",
             "user_nickname": "堂岛旺太郎",
             "user_random_status": true
-        }
+    }
     ```
   
     

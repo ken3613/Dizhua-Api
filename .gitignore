@@ -11,3 +11,5 @@ gen
 authrizotion.json
 test.py
 user.py
+pandas_test.py
+render.html

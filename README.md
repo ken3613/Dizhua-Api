@@ -109,29 +109,29 @@
   age              		用户设定的出生年份
   avatar           		用户头像url
   city             		用户设定的所在城市/城市的行政区，值为汉字
-  close_grade				爪级
+  close_grade			爪级
   current_age      		用户年龄，值为"xx岁"
   emchat_id        		未知
   enable_parlor			true/false，客厅主人标识
   gender           		性别，0为女性，1为男性
   has_blacked      		是否设置为黑名单，bool
-  has_greeted				是否递爪，bool
-  has_parlor				是否拥有客厅，bool
+  has_greeted			是否递爪，bool
+  has_parlor			是否拥有客厅，bool
   headwear         		未知
   is_blocked       		是否设置屏蔽，bool
-  is_greeted				是否递爪，bool
-  is_official				是否官方人员，bool
+  is_greeted			是否递爪，bool
+  is_official			是否官方人员，bool
   is_view_friend   		是否为爪友，bool
   is_view_self			是否查看的是自己，bool
-  journal					用户的兴趣话题，list(array)
-  kindness_level			喵级，int
-  matched_pct				三观相合百分比,int
+  journal				用户的兴趣话题，list(array)
+  kindness_level		喵级，int
+  matched_pct			三观相合百分比,int
   my_three_test_is_done	是否完成三观测试，bool
   online_status			在线状态，string，如："1小时前在线"
-  self_cover				封面图url，string
-  today_topic				未知
-  total_gift				总共收到的礼物，int
-  user_id					用户userId，string
+  self_cover			封面图url，string
+  today_topic			未知
+  total_gift			总共收到的礼物，int
+  user_id				用户userId，string
   user_nickname			用户昵称，string
   ```
 

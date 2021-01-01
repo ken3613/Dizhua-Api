@@ -16,12 +16,12 @@
 - 调用方法
 
   ```
-  API地址：https://apis-ff.zaih.com/flash-whisper/v2/applications?filter=all&page=1&per_page=100
+  API地址：https://apis-ff.zaih.com/flash-whisper/v2/applications?filter=all
   方法：GET
   Headers：
           Authorization:你的JWT
           Host:apis-ff.zaih.com
-          User-Agent:ios dizhuaApp 1.9.2 (暂时未知版本号对api调用的影响)
+          User-Agent:ios dizhuaApp 1.26.0(暂时未知版本号对api调用的影响)
   ```
 
 - 返回值
@@ -48,14 +48,12 @@
   template_type       聚会模版/类型，值normal为普通聚会，值parlor为客厅
   topic_creator_id    聚会创建者ID，普通聚会为null，客厅为客厅主人user_id
   topic_id            聚会主题ID
-  topic_type          未知
+  topic_type          未知,值为normal等
   user_avatar         匿名人物的头像
-  user_id             你的user_id
+  user_id             查询者user_id
   user_nickname       匿名人物的昵称
   user_random_status  未知，当前值恒为true
   ```
-
-  
 
 - 聚会信息字典样例
 
@@ -94,7 +92,7 @@
   方法：GET
   Headers:
           Host:dz.zaih.com
-          User-Agent:ios dizhuaApp 1.9.2 (暂时未知版本号对api调用的影响)
+          User-Agent:ios dizhuaApp 1.26.0 (暂时未知版本号对api调用的影响)
           Authorization:你的JWT (本Headers可忽略，区别请看下方字段详情)
   ```
 
@@ -108,18 +106,71 @@
 - 字典字段详情
 
   ```
-  age              用户设定的出生年份
-  avatar           用户头像url
-  city             用户设定的城市/城市的行政区，值为汉字
-  current_age      用户年龄，值为xx岁
-  emchat_id        未知
-  gender           性别，0为女性，1为男性
-  has_blacked      是否设置为黑名单，bool
-  headwear         未知
-  is_blocked       是否设置屏蔽，bool
-  is_view_friend   是否为爪友，bool
-  is_view_self
+  age              		用户设定的出生年份
+  avatar           		用户头像url
+  city             		用户设定的所在城市/城市的行政区，值为汉字
+  close_grade				爪级
+  current_age      		用户年龄，值为"xx岁"
+  emchat_id        		未知
+  enable_parlor			true/false，客厅主人标识
+  gender           		性别，0为女性，1为男性
+  has_blacked      		是否设置为黑名单，bool
+  has_greeted				是否递爪，bool
+  has_parlor				是否拥有客厅，bool
+  headwear         		未知
+  is_blocked       		是否设置屏蔽，bool
+  is_greeted				是否递爪，bool
+  is_official				是否官方人员，bool
+  is_view_friend   		是否为爪友，bool
+  is_view_self			是否查看的是自己，bool
+  journal					用户的兴趣话题，list(array)
+  kindness_level			喵级，int
+  matched_pct				三观相合百分比,int
+  my_three_test_is_done	是否完成三观测试，bool
+  online_status			在线状态，string，如："1小时前在线"
+  self_cover				封面图url，string
+  today_topic				未知
+  total_gift				总共收到的礼物，int
+  user_id					用户userId，string
+  user_nickname			用户昵称，string
+  ```
+
+
+- 用户信息字典样例  
+
+  ```
+  {
+      "age": "1950",
+      "avatar": "https://img4.izaihang.cn/FrVoCW80au4lois24p1KIvXNQ8Qc!avatar",
+      "city": "杭州",
+      "close_grade": 1.5,
+      "current_age": "70岁",
+      "emchat_id": "hx2046236280907390",
+      "enable_parlor": true,
+      "friend_remark": "",
+      "gender": 0,
+      "has_blacked": false,
+      "has_greeted": false,
+      "has_parlor": true,
+      "headwear": "",
+      "is_blocked": false,
+      "is_greeted": true,
+      "is_official": false,
+      "is_view_friend": true,
+      "is_view_self": false,
+      "journal": [],
+      "kindness_level": 8,
+      "matched_pct": 62,
+      "my_three_test_is_done": true,
+      "online_status": "1小时前在线",
+      "self_cover": "https://img4.izaihang.cn/FkeAF92XQW-o7skvFb6s2l0Eh7ze",
+      "today_topic": null,
+      "total_gift": "9464",
+      "user_id": "a4enufamiy",
+      "user_nickname": "西西弗斯之歌"
+  }
   ```
 
   
 
+  

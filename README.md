@@ -124,9 +124,9 @@
   is_view_friend   		是否为爪友，bool
   is_view_self			是否查看的是自己，bool
   journal				用户的兴趣话题，list(array)
-  kindness_level		喵级，int
+  kindness_level			喵级，int
   matched_pct			三观相合百分比,int
-  my_three_test_is_done	是否完成三观测试，bool
+  my_three_test_is_done		是否完成三观测试，bool
   online_status			在线状态，string，如："1小时前在线"
   self_cover			封面图url，string
   today_topic			未知

@@ -5,11 +5,15 @@
 # IntelliJ project files
 .idea
 *.iml
+*.bak
 out
 gen
 *.db
-test.py
-user.py
-pandas_test.py
-render.html
 /dzapi/authorization.json
+/test/cover
+/test/pandas_test.py
+/test/.coverage
+/test/coverage.xml
+build/
+dist/
+pydzapi.egg-info/

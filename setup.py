@@ -5,8 +5,8 @@ __requires__ = ['requests']
 
 setup(
     name='pydzapi',
-    version='0.0.0.1',
-    packages=find_packages(),
+    version='1.0.0.0',
+    packages=find_packages(exclude=("test", )),
     url='',
     license='',
     author='Nona',

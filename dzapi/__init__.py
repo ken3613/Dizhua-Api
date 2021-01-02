@@ -10,11 +10,15 @@ class API:
         'http': None,
         'https': None
     }
+    __use_session = False
 
     def __init__(self, auth, **kwargs):
         self.__auth = auth
         if 'proxies' in kwargs:
             self.__proxy = kwargs['proxies']
+        if 'usr_session' in kwargs:
+            self.__use_session = kwargs['use_session']
+        self.__session = requests.session()
 
     @staticmethod
     def request_verify_code(mobile: str) -> bool:
@@ -51,11 +55,12 @@ class API:
 
     def get_parties_data(self):
         url = 'https://apis-ff.zaih.com/flash-whisper/v2/applications?filter=all'
-        response = requests.get(url, headers={
+        headers = {
             'Authorization': f'JWT {self.__auth}',
             'Host': 'apis-ff.zaih.com',
             'User-Agent': f'ios dizhuaApp {APP_VERSION}'
-        }, proxies=self.__proxy)
+        }
+        response = self.__session.get(url, headers=headers, proxies=self.__proxy)
         r_json = response.json()
         return r_json
 
@@ -66,7 +71,7 @@ class API:
             'Host': 'apis-ff.zaih.com',
             'User-Agent': f'ios dizhuaApp {APP_VERSION}'
         }
-        response = requests.request("GET", url, headers=headers, proxies=self.__proxy)
+        response = self.__session.get(url, headers=headers, proxies=self.__proxy)
         if response.status_code == 200:
             return response.json()
         else:
@@ -74,11 +79,12 @@ class API:
 
     def get_self_info(self):
         url = 'https://apis-ff.zaih.com/flash-whisper/v2/accounts'
-        response = requests.get(url, headers={
+        headers = {
             'Authorization': f'JWT {self.__auth}',
             'Host': 'apis-ff.zaih.com',
             'User-Agent': f'ios dizhuaApp {APP_VERSION}'
-        }, proxies=self.__proxy)
+        }
+        response = self.__session.get(url, headers=headers, proxies=self.__proxy)
         r_json = response.json()
         return r_json
 
@@ -89,5 +95,15 @@ class API:
             'Host': 'apis-ff.zaih.com',
             'User-Agent': f'ios dizhuaApp {APP_VERSION}'
         }
-        response = requests.request('GET', url, headers=headers, proxies=self.__proxy)
+        response = self.__session.get(url, headers=headers, proxies=self.__proxy)
+        return response.json()
+
+    def get_user_info(self, uid):
+        url = f'https://dz.zaih.com/activity/whisper_api/v2/square/accounts/{uid}'
+        headers = {
+            'Authorization': f'JWT {self.__auth}',
+            'Host': 'dz.zaih.com',
+            'User-Agent': f'ios dizhuaApp {APP_VERSION}'
+        }
+        response = self.__session.get(url, headers=headers, proxies=self.__proxy)
         return response.json()

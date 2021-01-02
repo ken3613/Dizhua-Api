@@ -73,3 +73,29 @@ def test_request_verify_code():
               'jNUtwH36iYIYKuwc0Q4rkVrGVy8EhDlAguWjTM27Q')
     result = api.request_verify_code('123')
     assert_in('message', str(result))
+
+
+def test_get_user_info():
+    api = API('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+              '.eyJpc3MiOiJpb3MiLCJpYXQiOjE2MDkyOTQ'
+              '2NTAsImV4cCI6MTYwOTg5OTQ1MCwiYXVkIjo'
+              'iaHR0cHM6Ly9hcGlzLWZmLnphaWguY24vZmx'
+              'hc2gtYXV0aC92MS9vYXV0aC9qd3QiLCJzdWI'
+              'iOiJhMWF4Y2pkbXlwIiwic2NvcGVzIjpbIm9'
+              'wZW4iLCJyZWdpc3RlciIsImxvZ2luIl19.X_'
+              'jNUtwH36iYIYKuwc0Q4rkVrGVy8EhDlAguWjTM27Q')
+    info = api.get_user_info('a1jfayl4zp')
+    assert_equal('Nona', info['user_nickname'])
+
+
+def test_set_proxies():
+    api = API('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9'
+              '.eyJpc3MiOiJpb3MiLCJpYXQiOjE2MDkyOTQ'
+              '2NTAsImV4cCI6MTYwOTg5OTQ1MCwiYXVkIjo'
+              'iaHR0cHM6Ly9hcGlzLWZmLnphaWguY24vZmx'
+              'hc2gtYXV0aC92MS9vYXV0aC9qd3QiLCJzdWI'
+              'iOiJhMWF4Y2pkbXlwIiwic2NvcGVzIjpbIm9'
+              'wZW4iLCJyZWdpc3RlciIsImxvZ2luIl19.X_'
+              'jNUtwH36iYIYKuwc0Q4rkVrGVy8EhDlAguWjTM27Q',
+              proxies=None)
+    return True

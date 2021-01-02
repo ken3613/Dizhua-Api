@@ -29,10 +29,7 @@ class API:
             "mobile": mobile
         }
         response = requests.post(url=url, json=data, headers=headers, proxies={'https': None})
-        if response.status_code == 201:
-            return True
-        else:
-            return False
+        return response.json()
 
     @staticmethod
     def login(mobile: str, code: str) -> dict:

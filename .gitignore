@@ -11,9 +11,10 @@ gen
 *.db
 /dzapi/authorization.json
 /test/cover
-/test/pandas_test.py
+/test/pandas*.py
 /test/.coverage
 /test/coverage.xml
 build/
 dist/
 pydzapi.egg-info/
+__pycache__/

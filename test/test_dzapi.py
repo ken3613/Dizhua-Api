@@ -72,4 +72,4 @@ def test_request_verify_code():
               'wZW4iLCJyZWdpc3RlciIsImxvZ2luIl19.X_'
               'jNUtwH36iYIYKuwc0Q4rkVrGVy8EhDlAguWjTM27Q')
     result = api.request_verify_code('123')
-    assert_true(result)
+    assert_in('message', str(result))

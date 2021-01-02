@@ -10,14 +10,11 @@ class API:
         'http': None,
         'https': None
     }
-    __use_session = False
 
     def __init__(self, auth, **kwargs):
         self.__auth = auth
         if 'proxies' in kwargs:
             self.__proxy = kwargs['proxies']
-        if 'usr_session' in kwargs:
-            self.__use_session = kwargs['use_session']
         self.__session = requests.session()
 
     @staticmethod
@@ -72,10 +69,7 @@ class API:
             'User-Agent': f'ios dizhuaApp {APP_VERSION}'
         }
         response = self.__session.get(url, headers=headers, proxies=self.__proxy)
-        if response.status_code == 200:
-            return response.json()
-        else:
-            return {}
+        return response.json()
 
     def get_self_info(self):
         url = 'https://apis-ff.zaih.com/flash-whisper/v2/accounts'

@@ -1,2 +1,2 @@
 cd test
-nosetests --with-coverage --cover-package dzapi --cover-package test test
+nosetests -s --with-coverage --cover-package dzapi --cover-package test test

@@ -2,7 +2,7 @@
 有关递爪APP的相关API，非官方
 
 ![Python3.8](https://img.shields.io/badge/Python-3.8-brightgreen) 
-[![Build Status](https://travis-ci.org/ken3613/Dizhua-Api.svg?branch=master)](https://travis-ci.org/ken3613/Dizhua-Api) 
+[![Build Status](https://travis-ci.com/ken3613/Dizhua-Api.svg?branch=master)](https://travis-ci.org/ken3613/Dizhua-Api) 
 [![codecov](https://codecov.io/gh/ken3613/Dizhua-Api/branch/master/graph/badge.svg?token=qWbwx459b4)](https://codecov.io/gh/ken3613/Dizhua-Api)
 
 ### API列表
